@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="1093.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContactoController">
+
+    <children>
+
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="123.0" prefWidth="1171.0" text="Agenda de Contactos">
+         <font>
+            <Font name="SansSerif Bold Italic" size="22.0" />
+         </font></Label>
+
+        <HBox alignment="CENTER" prefHeight="152.0" prefWidth="1093.0" styleClass="green">
+
+            <children>
+                <TextField fx:id="txtNombre" prefHeight="30.0" prefWidth="219.0" promptText="Nombre" />
+
+                <TextField fx:id="txtCorreo" prefHeight="30.0" prefWidth="205.0" promptText="Correo" />
+
+                <TextField fx:id="txtNumero" prefHeight="30.0" prefWidth="224.0" promptText="Número" />
+
+                <TextField fx:id="txtComentario" prefHeight="29.0" prefWidth="219.0" promptText="Comentario" />
+            </children>
+
+            <opaqueInsets>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </opaqueInsets>
+
+        </HBox>
+
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+
+            <children>
+                <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#agregarContacto" prefHeight="43.0" prefWidth="98.0" text="Agregar" />
+
+                <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#eliminarContacto" prefHeight="43.0" prefWidth="114.0" text="Eliminar" />
+
+                <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#actualizarContacto" prefHeight="43.0" prefWidth="115.0" text="Actualizar" />
+
+                <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="44.0" prefWidth="140.0" text="Limpiar Campos">
+               <effect>
+                  <Glow level="0.0" />
+               </effect></Button>
+            </children>
+        </HBox>
+
+        <!-- Se agregó el fx:id a la tabla y a sus columnas correspondientes -->
+        <TableView fx:id="tablaAgenda" prefHeight="319.0" prefWidth="1093.0">
+            <columns>
+                <TableColumn fx:id="colNombre" prefWidth="400.0" text="Nombre" />
+
+                <TableColumn fx:id="colCorreo" prefWidth="341.0" text="Correo" />
+
+                <TableColumn fx:id="colNumero" minWidth="0.0" prefWidth="91.0" text="Número" />
+
+                <TableColumn fx:id="colComentario" prefWidth="260.0" text="Comentario" />
+            </columns>
+        </TableView>
+
+    </children>
+</VBox>
